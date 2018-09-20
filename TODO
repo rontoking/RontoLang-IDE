@@ -1,3 +1,0 @@
-- Make it possible to run multiple JARs and terminate any of them or all, AND each gets its own errorLog (useful for server/client apps).
-- Make function variable type and func instruction that creates it and add it to the pathfinding instruction
-- ... Replace reference objects with indexes that point to array that holds values to avoid casting and checking variable types
