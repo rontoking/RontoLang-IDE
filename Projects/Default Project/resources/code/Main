@@ -1,0 +1,10 @@
+public static main(){
+	console.visible = true;
+}
+
+public static update(){
+	if(console.entered){
+		println(console.input);
+		console.input = ""
+		
+		cons
