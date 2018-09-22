@@ -63,7 +63,7 @@ public class Main extends Application {
 
         templatePath = Paths.get(".").toAbsolutePath().toString();
         templatePath = templatePath.substring(0, templatePath.length() - 1);
-        templatePath = templatePath + "Template\\";
+        templatePath = templatePath + "Template/";
 
         addNodes();
         primaryStage.setTitle("RontoLang IDE");
@@ -75,7 +75,7 @@ public class Main extends Application {
 
         preferences = Preferences.userNodeForPackage(Main.class);
         String lastProject = preferences.get(LAST_PROJECT_OPENED, "Default Project");
-        if(Files.exists(Paths.get(Paths.get(templatePath).getParent().toAbsolutePath().toString() + "\\Projects\\" + lastProject))) {
+        if(Files.exists(Paths.get(Paths.get(templatePath).getParent().toAbsolutePath().toString() + "/Projects/" + lastProject))) {
             projectName.field.setText(lastProject);
         }else{
             projectName.field.setText("Default Project");
@@ -159,12 +159,12 @@ public class Main extends Application {
     }
 
     private void copyToTemplate(String folderName) {
-        try(Stream<Path> files = Files.list(Paths.get(projectRoot + "\\resources\\" + folderName))){
+        try(Stream<Path> files = Files.list(Paths.get(projectRoot + "/resources/" + folderName))){
             Path[] list = files.toArray(Path[]::new);
             if(list != null){
                 for(int i = 0; i < list.length; i++) {
                     try {
-                        Files.copy(list[i], Paths.get(templatePath + folderName + "\\" + list[i].getFileName().toString()), StandardCopyOption.REPLACE_EXISTING);
+                        Files.copy(list[i], Paths.get(templatePath + folderName + "/" + list[i].getFileName().toString()), StandardCopyOption.REPLACE_EXISTING);
                     } catch (IOException e) {
                         e.printStackTrace();
                         log.appendText(e.toString());
@@ -188,7 +188,7 @@ public class Main extends Application {
         if(!IS_IDE_BUSY || isChained) {
             if(!isChained)
                 IS_IDE_BUSY = true;
-            deleteFolder(Paths.get(projectRoot + "resources\\code"));
+            deleteFolder(Paths.get(projectRoot + "resources/code"));
             for (int i = 0; i < tabPane.getTabs().size(); i++) {
                 ((CodeTab) tabPane.getTabs().get(i)).save(projectRoot);
             }
@@ -205,7 +205,7 @@ public class Main extends Application {
             if(!isChained)
                 IS_IDE_BUSY = true;
             try {
-                deleteFolder(Paths.get(projectRoot + "resources\\code"));
+                deleteFolder(Paths.get(projectRoot + "resources/code"));
                 deleteFolder(Paths.get(templatePath + "images"));
                 deleteFolder(Paths.get(templatePath + "sounds"));
                 deleteFolder(Paths.get(templatePath + "music"));
@@ -215,9 +215,9 @@ public class Main extends Application {
                 copyToTemplate("music");
                 copyToTemplate("fonts");
                 saveCodeFiles(true);
-                Files.write(Paths.get(templatePath + "code\\code"), getSourceCode().getBytes(), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.WRITE);
-                Files.deleteIfExists(Paths.get(projectRoot + "build\\" + projectName.field.getText() + ".jar"));
-                ZipUtil.zipFile(Paths.get(templatePath).toAbsolutePath().toString(), Paths.get(projectRoot + "build\\" + projectName.field.getText() + ".jar").toAbsolutePath().toString(), true);
+                Files.write(Paths.get(templatePath + "code/code"), getSourceCode().getBytes(), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.WRITE);
+                Files.deleteIfExists(Paths.get(projectRoot + "build/" + projectName.field.getText() + ".jar"));
+                ZipUtil.zipFile(Paths.get(templatePath).toAbsolutePath().toString(), Paths.get(projectRoot + "build/" + projectName.field.getText() + ".jar").toAbsolutePath().toString(), true);
                 projectView.setRoot(getNodesForDirectory(Paths.get(projectRoot)));
                 Utility.expand(projectView.getRoot());
 
@@ -243,7 +243,7 @@ public class Main extends Application {
                     pb.directory(new File(projectRoot + "build"));
                     try {
                         pb.redirectErrorStream(true);
-                        pb.redirectOutput(new File(projectRoot + "build\\output"));
+                        pb.redirectOutput(new File(projectRoot + "build/output"));
                         log.appendText("JAR is running.\n");
                         process = pb.start();
                         process.waitFor();
@@ -251,7 +251,7 @@ public class Main extends Application {
                             runProjectButton.setText("Run Project");
                             log.appendText("JAR has finished running.\n");
                             try {
-                                Files.deleteIfExists(Paths.get(projectRoot + "build\\output"));
+                                Files.deleteIfExists(Paths.get(projectRoot + "build/output"));
                             } catch (IOException e) {
                                 e.printStackTrace();
                                 log.appendText(e.toString());
@@ -269,7 +269,7 @@ public class Main extends Application {
                     while (runProjectButton.getText().equals("Terminate Process")){
                         Platform.runLater(() -> {
                             try {
-                                errorLog.setText(new String(Files.readAllBytes(Paths.get(projectRoot + "build\\output"))));
+                                errorLog.setText(new String(Files.readAllBytes(Paths.get(projectRoot + "build/output"))));
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
@@ -284,7 +284,7 @@ public class Main extends Application {
                 outputThread.setDaemon(true);
                 processThread.setDaemon(true);
                 try {
-                    Files.deleteIfExists(Paths.get(projectRoot + "build\\output"));
+                    Files.deleteIfExists(Paths.get(projectRoot + "build/output"));
                 } catch (IOException e) {
                     e.printStackTrace();
                     log.appendText(e.toString());
@@ -362,16 +362,16 @@ public class Main extends Application {
         Button removeBtn = new Button("Remove Resource");
 
         imgBtn.setOnAction(e -> {
-            getResource(Paths.get(projectRoot + "resources\\images\\"), "Add Image", new String[]{"png", "jpg", "jpeg"});
+            getResource(Paths.get(projectRoot + "resources/images/"), "Add Image", new String[]{"png", "jpg", "jpeg"});
         });
         fontBtn.setOnAction(e -> {
-            getResource(Paths.get(projectRoot + "resources\\fonts\\"), "Add Font", new String[]{"ttf"});
+            getResource(Paths.get(projectRoot + "resources/fonts/"), "Add Font", new String[]{"ttf"});
         });
         soundBtn.setOnAction(e -> {
-            getResource(Paths.get(projectRoot + "resources\\sounds\\"), "Add Sound", new String[]{"ogg", "wav", "mp3"});
+            getResource(Paths.get(projectRoot + "resources/sounds/"), "Add Sound", new String[]{"ogg", "wav", "mp3"});
         });
         musicBtn.setOnAction(e -> {
-            getResource(Paths.get(projectRoot + "resources\\music\\"), "Add Music", new String[]{"ogg", "wav", "mp3"});
+            getResource(Paths.get(projectRoot + "resources/music/"), "Add Music", new String[]{"ogg", "wav", "mp3"});
         });
         removeBtn.setOnAction(e -> {
             removeResource();
@@ -394,7 +394,7 @@ public class Main extends Application {
         File chosenFile = fileChooser.showOpenDialog(primaryStage);
         if (chosenFile != null) {
             try {
-                Files.copy(chosenFile.toPath(), Paths.get(destination.toAbsolutePath().toString() + "\\" + chosenFile.getName()));
+                Files.copy(chosenFile.toPath(), Paths.get(destination.toAbsolutePath().toString() + "/" + chosenFile.getName()));
                 projectView.setRoot(getNodesForDirectory(((TreeFile)projectView.getRoot()).file));
                 Utility.expand(projectView.getRoot());
             } catch (IOException e) {
@@ -407,12 +407,12 @@ public class Main extends Application {
     private void setProjectRoot(){
         projectRoot = Paths.get(".").toAbsolutePath().toString();
         projectRoot = projectRoot.substring(0, projectRoot.length() - 1);
-        projectRoot = projectRoot + "Projects\\" + projectName.field.getText() + "\\";
+        projectRoot = projectRoot + "Projects/" + projectName.field.getText() + "/";
     }
 
     private void removeResource(){
         TreeFile tf = (TreeFile)projectView.getSelectionModel().getSelectedItem();
-        if(tf != null && !Files.isDirectory(tf.file) && !tf.getValue().toString().split("\\.")[1].equals("jar")){
+        if(tf != null && !Files.isDirectory(tf.file) && !tf.getValue().toString().split("/.")[1].equals("jar")){
             try {
                 Files.deleteIfExists(tf.file);
                 projectView.setRoot(getNodesForDirectory(((TreeFile)projectView.getRoot()).file));
@@ -425,7 +425,7 @@ public class Main extends Application {
 
     private void renameProject(){
         try {
-            Files.move(Paths.get(projectRoot), Paths.get(Paths.get(projectRoot).getParent().toAbsolutePath().toString() + "\\" + projectName.field.getText()));
+            Files.move(Paths.get(projectRoot), Paths.get(Paths.get(projectRoot).getParent().toAbsolutePath().toString() + "/" + projectName.field.getText()));
             preferences.put(LAST_PROJECT_OPENED, projectName.field.getText());
             preferences.flush();
         } catch (IOException e1) {
@@ -444,11 +444,11 @@ public class Main extends Application {
             preferences.flush();
             setProjectRoot();
             Files.createDirectories(Paths.get(projectRoot + "build"));
-            Files.createDirectories(Paths.get(projectRoot + "resources\\images"));
-            Files.createDirectories(Paths.get(projectRoot + "resources\\sounds"));
-            Files.createDirectories(Paths.get(projectRoot + "resources\\music"));
-            Files.createDirectories(Paths.get(projectRoot + "resources\\fonts"));
-            Files.createDirectories(Paths.get(projectRoot + "resources\\code"));
+            Files.createDirectories(Paths.get(projectRoot + "resources/images"));
+            Files.createDirectories(Paths.get(projectRoot + "resources/sounds"));
+            Files.createDirectories(Paths.get(projectRoot + "resources/music"));
+            Files.createDirectories(Paths.get(projectRoot + "resources/fonts"));
+            Files.createDirectories(Paths.get(projectRoot + "resources/code"));
         } catch (IOException e) {
             e.printStackTrace();
         } catch (BackingStoreException e) {
@@ -460,7 +460,7 @@ public class Main extends Application {
         tabPane.getTabs().clear();
         IGNORE_TEXT_CHANGED = false;
 
-        try(Stream<Path> files = Files.list(Paths.get(projectRoot + "resources\\code"))) {
+        try(Stream<Path> files = Files.list(Paths.get(projectRoot + "resources/code"))) {
             Path[] list = files.toArray(Path[]::new);
             if(list != null){
                 for(int i = 0; i < list.length; i++){
@@ -518,16 +518,16 @@ public class Main extends Application {
         MenuItem removeResourceItem = new MenuItem("Remove Resource");
 
         imgItem.setOnAction(e -> {
-            getResource(Paths.get(projectRoot + "resources\\images\\"), "Add Image", new String[]{"png", "jpg", "jpeg"});
+            getResource(Paths.get(projectRoot + "resources/images/"), "Add Image", new String[]{"png", "jpg", "jpeg"});
         });
         fontItem.setOnAction(e -> {
-            getResource(Paths.get(projectRoot + "resources\\fonts\\"), "Add Font", new String[]{"ttf"});
+            getResource(Paths.get(projectRoot + "resources/fonts/"), "Add Font", new String[]{"ttf"});
         });
         soundItem.setOnAction(e -> {
-            getResource(Paths.get(projectRoot + "resources\\sounds\\"), "Add Sound", new String[]{"ogg", "wav", "mp3"});
+            getResource(Paths.get(projectRoot + "resources/sounds/"), "Add Sound", new String[]{"ogg", "wav", "mp3"});
         });
         musicItem.setOnAction(e -> {
-            getResource(Paths.get(projectRoot + "resources\\music\\"), "Add Music", new String[]{"ogg", "wav", "mp3"});
+            getResource(Paths.get(projectRoot + "resources/music/"), "Add Music", new String[]{"ogg", "wav", "mp3"});
         });
         removeResourceItem.setOnAction(e -> {
             removeResource();
@@ -606,10 +606,10 @@ public class Main extends Application {
             }else if(e.getCharacter().equals("[")){
                 codeArea.insertText(codeArea.getCaretPosition(), "]");
                 codeArea.moveTo(codeArea.getCaretPosition() - 1);
-            }else if(e.getCharacter().equals("\"") && (codeArea.getText().length() <= 1 || codeArea.getText().charAt(codeArea.getCaretPosition() - 2) != '\\')){
+            }else if(e.getCharacter().equals("\"") && (codeArea.getText().length() <= 1 || codeArea.getText().charAt(codeArea.getCaretPosition() - 2) != '/')){
                 codeArea.insertText(codeArea.getCaretPosition(), "\"");
                 codeArea.moveTo(codeArea.getCaretPosition() - 1);
-            }else if(e.getCharacter().equals("'") && (codeArea.getText().length() <= 1 || codeArea.getText().charAt(codeArea.getCaretPosition() - 2) != '\\')){
+            }else if(e.getCharacter().equals("'") && (codeArea.getText().length() <= 1 || codeArea.getText().charAt(codeArea.getCaretPosition() - 2) != '/')){
                 codeArea.insertText(codeArea.getCaretPosition(), "'");
                 codeArea.moveTo(codeArea.getCaretPosition() - 1);
             }

@@ -15,7 +15,7 @@ public class CodeTab extends Tab {
 
     public void save(String projectPath){
         try {
-            Files.write(new File(projectPath + "resources\\code\\" + getText()).toPath(), code.getBytes(), StandardOpenOption.CREATE_NEW, StandardOpenOption.TRUNCATE_EXISTING);
+            Files.write(new File(projectPath + "resources/code/" + getText()).toPath(), code.getBytes(), StandardOpenOption.CREATE_NEW, StandardOpenOption.TRUNCATE_EXISTING);
         } catch (IOException e) {
             e.printStackTrace();
         }
