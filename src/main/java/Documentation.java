@@ -41,7 +41,7 @@ public class Documentation {
         add(treeItem, 0, "any");
 
         add(treeItem, 1, "copy", true, "any");
-        add(treeItem, 1, "type", true, "string");
+        add(treeItem, 1, "type", true, "str");
         add(treeItem, 1, "print", true, "void");
         add(treeItem, 1, "println", true, "void");
         add(treeItem, 1, "serialize", true, "byte[]");
@@ -76,18 +76,18 @@ public class Documentation {
         add(treeItem, 1, "floor", true, "int");
         add(treeItem, 1, "limit(double min, double max)", "double");
 
-        add(treeItem, 0, "string");
+        add(treeItem, 0, "str");
 
         add(treeItem, 1, "size", true, "int");
-        add(treeItem, 1, "trim", true, "string");
-        add(treeItem, 1, "getUpper", true, "string");
-        add(treeItem, 1, "getLower", true, "string");
+        add(treeItem, 1, "trim", true, "str");
+        add(treeItem, 1, "getUpper", true, "str");
+        add(treeItem, 1, "getLower", true, "str");
         add(treeItem, 1, "list", true, "char[]");
 
-        add(treeItem, 1, "substring(int start)", "string");
-        add(treeItem, 1, "substring(int start, int end)", "string");
+        add(treeItem, 1, "substring(int start)", "str");
+        add(treeItem, 1, "substring(int start, int end)", "str");
         add(treeItem, 1, "charAt(int index)", "char");
-        add(treeItem, 1, "replace(string target, string replacement)", "string");
+        add(treeItem, 1, "replace(string target, string replacement)", "str");
         add(treeItem, 1, "split(string splitter)", "string[]");
         add(treeItem, 1, "split(string splitter, int limit)", "string[]");
         add(treeItem, 1, "indexOf(string s)", "int");
@@ -104,13 +104,28 @@ public class Documentation {
         add(treeItem, 1, "shuffle", true, "void");
         add(treeItem, 1, "reverse", true, "void");
         add(treeItem, 1, "random", true, "any");
+        add(treeItem, 1, "sort", true, "void");
 
         add(treeItem, 1, "add(any item)", "void");
         add(treeItem, 1, "remove(int index)", "void");
-        add(treeItem, 1, "join(string joiner)", "string");
+        add(treeItem, 1, "swap(int index1, int index2)", "void");
+        add(treeItem, 1, "join(string joiner)", "str");
         add(treeItem, 1, "insert(int index, any item)", "void");
         add(treeItem, 1, "startsWith(list start)", "bool");
         add(treeItem, 1, "endsWith(list end)", "bool");
+        add(treeItem, 1, "sort(bool direction)", "void");
+        add(treeItem, 1, "sort(x, y, bool condition)", "void");
+        add(treeItem, 1, "any(x, bool condition)", "bool");
+        add(treeItem, 1, "first(x, bool condition)", "any");
+        add(treeItem, 1, "last(x, bool condition)", "any");
+        add(treeItem, 1, "all(x, bool condition)", "list");
+        add(treeItem, 1, "removeFirst(x, bool condition)", "bool");
+        add(treeItem, 1, "removeLast(x, bool condition)", "bool");
+        add(treeItem, 1, "removeAll(x, bool condition)", "int");
+        add(treeItem, 1, "firstIndexOf(x, bool condition)", "int");
+        add(treeItem, 1, "lastIndexOf(x, bool condition)", "int");
+        add(treeItem, 1, "sub(int start)", "list");
+        add(treeItem, 1, "sub(int start, int end)", "list");
 
         add(treeItem, 0, "map");
 
@@ -122,15 +137,15 @@ public class Documentation {
 
         add(treeItem, 1, "exists", true, "bool");
         add(treeItem, 1, "parent", true, "file");
-        add(treeItem, 1, "path", true, "string");
-        add(treeItem, 1, "name", true, "string");
-        add(treeItem, 1, "extension", true, "string");
+        add(treeItem, 1, "path", true, "str");
+        add(treeItem, 1, "name", true, "str");
+        add(treeItem, 1, "extension", true, "str");
         add(treeItem, 1, "bytes", true, "byte[]");
-        add(treeItem, 1, "read", true, "string");
+        add(treeItem, 1, "read", true, "str");
         add(treeItem, 1, "isFolder", true, "bool");
         add(treeItem, 1, "size", true, "int");
         add(treeItem, 1, "lastModified", true, "int");
-        add(treeItem, 1, "type", true, "string");
+        add(treeItem, 1, "type", true, "str");
         add(treeItem, 1, "children", true, "file[]");
         add(treeItem, 1, "makeFolders", true, "void");
         add(treeItem, 1, "delete", true, "void");
@@ -150,6 +165,8 @@ public class Documentation {
 
         add(treeItem, 1, "width", true, "int");
         add(treeItem, 1, "height", true, "int");
+
+        add(treeItem, 1, "draw(double x, double y)", "void");
 
         add(treeItem, 0, "font");
 
@@ -323,14 +340,14 @@ public class Documentation {
 
         add(treeItem, 1, "visible", false, "bool");
         add(treeItem, 1, "entered", false, "bool");
-        add(treeItem, 1, "input", false, "string");
-        add(treeItem, 1, "output", false, "string");
+        add(treeItem, 1, "input", false, "str");
+        add(treeItem, 1, "output", false, "str");
 
         add(treeItem, 0, "window", true, "void");
 
         add(treeItem, 1, "width", false, "int");
         add(treeItem, 1, "height", false, "int");
-        add(treeItem, 1, "title", false, "string");
+        add(treeItem, 1, "title", false, "str");
         add(treeItem, 1, "fullscreen", false, "bool");
         add(treeItem, 1, "resizable", false, "bool");
         add(treeItem, 1, "vsync", false, "bool");
@@ -393,7 +410,7 @@ public class Documentation {
         add(treeItem, 0, "font(int size)", "font");
         add(treeItem, 0, "font(string name, int size)", "font");
         add(treeItem, 0, "font(file f, int size)", "font");
-        add(treeItem, 0, "string(any value)", "string");
+        add(treeItem, 0, "string(any value)", "str");
         add(treeItem, 0, "int(string s)", "int");
         add(treeItem, 0, "float(string s)", "float");
         add(treeItem, 0, "double(string s)", "double");

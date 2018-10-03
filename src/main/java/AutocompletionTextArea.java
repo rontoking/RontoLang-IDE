@@ -22,15 +22,6 @@ public class AutocompletionTextArea extends InlineCssTextArea {
     private final SortedSet<String> entries;
     //popup GUI
     protected ContextMenu entriesPopup;
-    private static Robot robot;
-
-    static {
-        try {
-            robot = new Robot();
-        } catch (AWTException e) {
-            e.printStackTrace();
-        }
-    }
 
     public AutocompletionTextArea() {
         super();
@@ -74,11 +65,11 @@ public class AutocompletionTextArea extends InlineCssTextArea {
                             .filter(e -> e.length() >= finalWord.length() && !finalWord.equals(e) && e.substring(0, finalWord.length()).equals(finalWord))
                             .collect(Collectors.toList());
                     //some suggestions are found
-                    if (!filteredEntries.isEmpty()) {
+                    if (!filteredEntries.isEmpty() && Main.enableAutoComplete.isSelected()) {
                         //build popup - list of "CustomMenuItem"
                         populatePopup(filteredEntries, word);
-                        robot.keyPress(KeyEvent.VK_DOWN);
-                        robot.keyRelease(KeyEvent.VK_DOWN);
+                        //robot.keyPress(KeyEvent.VK_DOWN);
+                        //robot.keyRelease(KeyEvent.VK_DOWN);
                         entriesPopup.show(this, getCaretBounds().get().getMaxX(), getCaretBounds().get().getMaxY()); //position of popup
                         // entriesPopup.show(this, MouseInfo.getPointerInfo().getLocation().x + 10, MouseInfo.getPointerInfo().getLocation().y); //position of popup
                         //no suggestions -> hide

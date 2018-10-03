@@ -1,10 +1,8 @@
-public static main(){
-	console.visible = true;
-}
+asddsadsadasdasasddsadsadasdasasddsadsadasdasasddsadsadasdasasddsadsadasdasasddsadsadasdas
+asddsadsadasdasasddsadsadasdasasddsadsadasdasasddsadsadasdasasddsadsadasdasasddsadsadasdas
+asddsadsadasdas
 
-public static update(){
-	if(console.entered){
-		println(console.input);
-		console.input = ""
-		
-		cons
+dasd
+
+
+asd

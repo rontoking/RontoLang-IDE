@@ -1,23 +1,19 @@
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.Button;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
-import javafx.scene.input.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.fxmisc.richtext.LineNumberFactory;
 
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
@@ -43,6 +39,7 @@ public class Main extends Application {
     private TextArea log = new TextArea();
     private TextArea errorLog = new TextArea();
     private SplitPane logPane = new SplitPane();
+    public static CheckBox enableAutoComplete = new CheckBox("Autocomplete");
 
     private double scroll = 24;
     private String projectRoot, templatePath;
@@ -353,7 +350,10 @@ public class Main extends Application {
                 tabPane.getTabs().remove(tabPane.getSelectionModel().getSelectedIndex());
             }
         });
-        codePane.getChildren().addAll(nameField, addBtn, renameBtn, deleteBtn);
+
+        enableAutoComplete.setSelected(true);
+
+        codePane.getChildren().addAll(nameField, addBtn, renameBtn, deleteBtn, enableAutoComplete);
 
         Button imgBtn = new Button("Add Image");
         Button fontBtn = new Button("Add Font");
@@ -589,7 +589,7 @@ public class Main extends Application {
         });
         codeArea.setOnKeyPressed(e -> {
             if(e.getCode() == KeyCode.ENTER){
-                if(codeArea.getText().length() > 0 && codeArea.getText().substring(0, codeArea.getCaretPosition()).trim().length() > 0 && codeArea.getText().substring(0, codeArea.getCaretPosition()).trim().charAt(codeArea.getText().substring(0, codeArea.getCaretPosition()).trim().length() - 1) == '{'){
+                if(codeArea.getText().length() > 0 && codeArea.getText().substring(0, codeArea.getCaretPosition()).replace(" ", "").replace("\t", "").length() > 0 && codeArea.getText().substring(0, codeArea.getCaretPosition()).replace(" ", "").replace("\t", "").charAt(codeArea.getText().substring(0, codeArea.getCaretPosition()).replace(" ", "").replace("\t", "").length() - 2) == '{'){
                     codeArea.insertText(codeArea.getCaretPosition(), Utility.repeat("\t", Utility.getIndentNum(codeArea.getParagraph(codeArea.getCurrentParagraph() - 1).getText())) + "\t");
                     int pos = codeArea.getCaretPosition();
                     codeArea.insertText(codeArea.getCaretPosition(),"\n" + Utility.repeat("\t", Utility.getIndentNum(codeArea.getParagraph(codeArea.getCurrentParagraph() - 1).getText())) + "}");
