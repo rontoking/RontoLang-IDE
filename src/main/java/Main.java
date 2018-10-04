@@ -241,7 +241,6 @@ public class Main extends Application {
                     try {
                         pb.redirectErrorStream(true);
                         pb.redirectOutput(new File(projectRoot + "build/output"));
-                        log.appendText("JAR is running.\n");
                         process = pb.start();
                         process.waitFor();
                         Platform.runLater(() -> {
@@ -254,10 +253,7 @@ public class Main extends Application {
                                 log.appendText(e.toString());
                             }
                         });
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                        log.appendText(e.toString());
-                    } catch (InterruptedException e) {
+                    } catch (IOException | InterruptedException e) {
                         e.printStackTrace();
                         log.appendText(e.toString());
                     }
@@ -266,7 +262,8 @@ public class Main extends Application {
                     while (runProjectButton.getText().equals("Terminate Process")){
                         Platform.runLater(() -> {
                             try {
-                                errorLog.setText(new String(Files.readAllBytes(Paths.get(projectRoot + "build/output"))));
+                                if(Files.exists(Paths.get(projectRoot + "build/output")))
+                                    errorLog.setText(new String(Files.readAllBytes(Paths.get(projectRoot + "build/output"))));
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
@@ -287,6 +284,7 @@ public class Main extends Application {
                     log.appendText(e.toString());
                 }
                 runProjectButton.setText("Terminate Process");
+                log.appendText("JAR is running.\n");
                 processThread.start();
                 outputThread.start();
             }

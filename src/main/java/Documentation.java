@@ -116,6 +116,7 @@ public class Documentation {
         add(treeItem, 1, "sort(bool direction)", "void");
         add(treeItem, 1, "sort(x, y, bool condition)", "void");
         add(treeItem, 1, "any(x, bool condition)", "bool");
+        add(treeItem, 1, "count(x, bool condition)", "int");
         add(treeItem, 1, "first(x, bool condition)", "any");
         add(treeItem, 1, "last(x, bool condition)", "any");
         add(treeItem, 1, "all(x, bool condition)", "list");
@@ -280,6 +281,7 @@ public class Documentation {
     private static DocumentationTreeItem globalVariables(){
         DocumentationTreeItem treeItem = new DocumentationTreeItem("Global Variables");
 
+        add(treeItem, 0, "exit", true, "void");
         add(treeItem, 0, "break", true, "void");
         add(treeItem, 0, "construct", true, "void");
         add(treeItem, 0, "this", true, "any");
@@ -292,6 +294,7 @@ public class Documentation {
         add(treeItem, 0, "mouseDeltaY", true, "int");
         add(treeItem, 0, "mouseDeltaPos", true, "point");
         add(treeItem, 0, "mouseScroll", true, "int");
+        add(treeItem, 0, "clipboard", false, "string");
         add(treeItem, 0, "defaultFont", true, "font");
         add(treeItem, 0, "server", true, "server");
 

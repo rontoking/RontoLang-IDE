@@ -72,12 +72,12 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10132">
-              <caret line="617" column="35" lean-forward="false" selection-start-line="617" selection-start-column="35" selection-end-line="617" selection-end-column="35" />
+            <state relative-caret-position="1037">
+              <caret line="286" column="52" lean-forward="false" selection-start-line="286" selection-start-column="52" selection-end-line="286" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#27096#27097#0" expanded="true" />
-                <element signature="e#27124#27125#0" expanded="true" />
+                <element signature="e#27051#27052#0" expanded="true" />
+                <element signature="e#27079#27080#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,12 +116,10 @@
       <file leaf-file-name="Documentation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Documentation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1051">
-              <caret line="364" column="41" lean-forward="true" selection-start-line="364" selection-start-column="41" selection-end-line="364" selection-end-column="41" />
+            <state relative-caret-position="332">
+              <caret line="287" column="16" lean-forward="false" selection-start-line="287" selection-start-column="16" selection-end-line="287" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#431#1113#0" expanded="true" />
-                <element signature="e#1112#1113#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -162,7 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>proce</find>
       <find>sourceco</find>
       <find>&quot;</find>
       <find>&quot; &quot;</find>
@@ -192,6 +189,7 @@
       <find>&quot;string</find>
       <find>string</find>
       <find>path(</find>
+      <find>runProjectButton</find>
     </findStrings>
     <replaceStrings>
       <replace>ArrayList&lt;</replace>
@@ -594,8 +592,8 @@
         <option value="$PROJECT_DIR$/TODO" />
         <option value="$PROJECT_DIR$/src/main/java/CodeTab.java" />
         <option value="$PROJECT_DIR$/src/main/java/AutocompletionTextArea.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/TODO.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Documentation.java" />
       </list>
     </option>
@@ -652,29 +650,32 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="RontoLang IDE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RontoLang IDE" type="462c0819:PsiDirectoryNode" />
+              <item name="RontoLang IDE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="RontoLang IDE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RontoLang IDE" type="462c0819:PsiDirectoryNode" />
+              <item name="RontoLang IDE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RontoLang IDE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RontoLang IDE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RontoLang IDE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RontoLang IDE" type="462c0819:PsiDirectoryNode" />
+              <item name="RontoLang IDE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="RontoLang IDE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RontoLang IDE" type="462c0819:PsiDirectoryNode" />
+              <item name="RontoLang IDE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -683,8 +684,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -888,11 +891,13 @@
       <workItem from="1538597345435" duration="3056000" />
       <workItem from="1538602772008" duration="604000" />
       <workItem from="1538671952008" duration="437000" />
+      <workItem from="1538684775229" duration="504000" />
+      <workItem from="1538693061042" duration="1639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91709000" />
+    <option name="totallyTimeSpent" value="93852000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -905,8 +910,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27138332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27138332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -918,8 +923,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39915523" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39915523" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1233,18 +1238,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10132">
-          <caret line="617" column="35" lean-forward="false" selection-start-line="617" selection-start-column="35" selection-end-line="617" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#27096#27097#0" expanded="true" />
-            <element signature="e#27124#27125#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TODO.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1253,14 +1246,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Documentation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1051">
-          <caret line="364" column="41" lean-forward="true" selection-start-line="364" selection-start-column="41" selection-end-line="364" selection-end-column="41" />
+        <state relative-caret-position="1037">
+          <caret line="286" column="52" lean-forward="false" selection-start-line="286" selection-start-column="52" selection-end-line="286" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#431#1113#0" expanded="true" />
-            <element signature="e#1112#1113#0" expanded="true" />
+            <element signature="e#27051#27052#0" expanded="true" />
+            <element signature="e#27079#27080#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Documentation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="287" column="16" lean-forward="false" selection-start-line="287" selection-start-column="16" selection-end-line="287" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
