@@ -1,4 +1,3 @@
-- Fix problem with whole IDE freezing and not reacting to input sometimes when clicking Run Project
 - Add special code file that sets the config before the Main class starts (like config.title, config.width, config.height...)
 - Add changing viewport to camera (stretch, screen, fit...)
 - Optimise RontoLang by replacing Object in Reference to int that points to index in an array that keeps all reference values
