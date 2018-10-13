@@ -42,6 +42,7 @@ public class Documentation {
 
         add(treeItem, 1, "copy", true, "any");
         add(treeItem, 1, "type", true, "str");
+        add(treeItem, 1, "str", true, "str");
         add(treeItem, 1, "print", true, "void");
         add(treeItem, 1, "println", true, "void");
         add(treeItem, 1, "serialize", true, "byte[]");
@@ -275,6 +276,10 @@ public class Documentation {
 
         add(treeItem, 1, "rotate(float degrees)", "void");
 
+        add(treeItem, 0, "expr");
+
+        add(treeItem, 1, "run", true, "any");
+
         return treeItem;
     }
 
@@ -433,6 +438,7 @@ public class Documentation {
         add(treeItem, 0, "color(str name, float a)", "color");
         add(treeItem, 0, "color(float r, float g, float b)", "color");
         add(treeItem, 0, "color(float r, float g, float b, float a)", "color");
+        add(treeItem, 0, "expr(any expression)", "expr");
         add(treeItem, 0, "draw(str text)", "void");
         add(treeItem, 0, "draw(str text, int x, int y)", "void");
         add(treeItem, 0, "draw(font f, str text, int x, int y)", "void");
