@@ -117,17 +117,27 @@ public class Documentation {
         add(treeItem, 1, "sort(bool direction)", "void");
         add(treeItem, 1, "sort(x, y, bool condition)", "void");
         add(treeItem, 1, "any(x, bool condition)", "bool");
+        add(treeItem, 1, "any(any value)", "bool");
         add(treeItem, 1, "count(x, bool condition)", "int");
+        add(treeItem, 1, "count(any value)", "int");
         add(treeItem, 1, "first(x, bool condition)", "any");
+        add(treeItem, 1, "first(any value)", "any");
         add(treeItem, 1, "last(x, bool condition)", "any");
+        add(treeItem, 1, "last(any value)", "any");
         add(treeItem, 1, "all(x, bool condition)", "list");
+        add(treeItem, 1, "all(any value)", "list");
         add(treeItem, 1, "removeFirst(x, bool condition)", "bool");
+        add(treeItem, 1, "removeFirst(any value)", "bool");
         add(treeItem, 1, "removeLast(x, bool condition)", "bool");
+        add(treeItem, 1, "removeLast(any value)", "bool");
         add(treeItem, 1, "removeAll(x, bool condition)", "int");
+        add(treeItem, 1, "removeAll(any value)", "int");
         add(treeItem, 1, "firstIndexOf(x, bool condition)", "int");
+        add(treeItem, 1, "firstIndexOf(any value)", "int");
         add(treeItem, 1, "lastIndexOf(x, bool condition)", "int");
+        add(treeItem, 1, "lastIndexOf(any value)", "int");
         add(treeItem, 1, "sub(int start)", "list");
-        add(treeItem, 1, "sub(int start, int end)", "list");
+        add(treeItem, 1, "sub(any value)", "list");
 
         add(treeItem, 0, "map");
 
@@ -280,12 +290,17 @@ public class Documentation {
 
         add(treeItem, 1, "run", true, "any");
 
+        add(treeItem, 0, "func");
+
+        add(treeItem, 1, "run(any arguments)", "any");
+
         return treeItem;
     }
 
     private static DocumentationTreeItem globalVariables(){
         DocumentationTreeItem treeItem = new DocumentationTreeItem("Global Variables");
 
+        add(treeItem, 0, "null", true, "null");
         add(treeItem, 0, "exit", true, "void");
         add(treeItem, 0, "break", true, "void");
         add(treeItem, 0, "construct", true, "void");

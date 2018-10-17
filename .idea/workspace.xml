@@ -39,21 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AutocompletionTextArea.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/AutocompletionTextArea.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="67" column="90" lean-forward="false" selection-start-line="67" selection-start-column="90" selection-end-line="67" selection-end-column="90" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TODO.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TODO.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+            <state relative-caret-position="51">
+              <caret line="3" column="125" lean-forward="false" selection-start-line="3" selection-start-column="125" selection-end-line="3" selection-end-column="125" />
               <folding />
             </state>
           </provider>
@@ -116,8 +106,8 @@
       <file leaf-file-name="Documentation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Documentation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="440" column="54" lean-forward="false" selection-start-line="440" selection-start-column="54" selection-end-line="440" selection-end-column="54" />
+            <state relative-caret-position="645">
+              <caret line="139" column="39" lean-forward="false" selection-start-line="139" selection-start-column="39" selection-end-line="139" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,7 +118,7 @@
       <file leaf-file-name="DocumentationTreeItem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DocumentationTreeItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="301">
               <caret line="26" column="40" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -160,9 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot; &quot;</find>
-      <find>getsour</find>
-      <find>documenta</find>
       <find>(log</find>
       <find>output&quot;</find>
       <find>out.pr</find>
@@ -190,6 +177,9 @@
       <find>runProjectButton</find>
       <find>&quot;</find>
       <find>copy</find>
+      <find>expr</find>
+      <find>shapes</find>
+      <find>any(</find>
     </findStrings>
     <replaceStrings>
       <replace>ArrayList&lt;</replace>
@@ -592,9 +582,9 @@
         <option value="$PROJECT_DIR$/TODO" />
         <option value="$PROJECT_DIR$/src/main/java/CodeTab.java" />
         <option value="$PROJECT_DIR$/src/main/java/AutocompletionTextArea.java" />
-        <option value="$PROJECT_DIR$/TODO.txt" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Documentation.java" />
+        <option value="$PROJECT_DIR$/TODO.txt" />
       </list>
     </option>
   </component>
@@ -651,6 +641,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -685,10 +677,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -897,11 +887,12 @@
       <workItem from="1538858776498" duration="1187000" />
       <workItem from="1538901991784" duration="5000" />
       <workItem from="1539468446275" duration="282000" />
+      <workItem from="1539810275905" duration="260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95326000" />
+    <option name="totallyTimeSpent" value="95586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1207,18 +1198,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Projects/Default Project/build/output" />
     <entry file="file://$PROJECT_DIR$/TODO" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/DocumentationTreeItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="40" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CodeTab.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1235,14 +1214,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AutocompletionTextArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="67" column="90" lean-forward="false" selection-start-line="67" selection-start-column="90" selection-end-line="67" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4505">
@@ -1255,10 +1226,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/AutocompletionTextArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="67" column="90" lean-forward="false" selection-start-line="67" selection-start-column="90" selection-end-line="67" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DocumentationTreeItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="26" column="40" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Documentation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="440" column="54" lean-forward="false" selection-start-line="440" selection-start-column="54" selection-end-line="440" selection-end-column="54" />
+        <state relative-caret-position="645">
+          <caret line="139" column="39" lean-forward="false" selection-start-line="139" selection-start-column="39" selection-end-line="139" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1267,8 +1258,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TODO.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+        <state relative-caret-position="51">
+          <caret line="3" column="125" lean-forward="false" selection-start-line="3" selection-start-column="125" selection-end-line="3" selection-end-column="125" />
           <folding />
         </state>
       </provider>
