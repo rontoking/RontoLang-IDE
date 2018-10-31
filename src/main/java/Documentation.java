@@ -41,6 +41,7 @@ public class Documentation {
         add(treeItem, 0, "any");
 
         add(treeItem, 1, "copy", true, "any");
+        add(treeItem, 1, "swap(any variable)", "void");
         add(treeItem, 1, "type", true, "str");
         add(treeItem, 1, "str", true, "str");
         add(treeItem, 1, "print", true, "void");
@@ -102,6 +103,7 @@ public class Documentation {
         add(treeItem, 0, "list");
 
         add(treeItem, 1, "size", true, "int");
+        add(treeItem, 1, "last", false, "any");
         add(treeItem, 1, "shuffle", true, "void");
         add(treeItem, 1, "reverse", true, "void");
         add(treeItem, 1, "random", true, "any");
@@ -276,7 +278,7 @@ public class Documentation {
 
         add(treeItem, 1, "draw", true, "void");
 
-        add(treeItem, 0, "camera2d");
+        add(treeItem, 0, "cam2");
 
         add(treeItem, 1, "x", false, "double");
         add(treeItem, 1, "y", false, "double");
@@ -306,6 +308,13 @@ public class Documentation {
         add(treeItem, 0, "construct", true, "void");
         add(treeItem, 0, "this", true, "any");
         add(treeItem, 0, "super", true, "any");
+        add(treeItem, 0, "scanBool", true, "bool");
+        add(treeItem, 0, "scanByte", true, "byte");
+        add(treeItem, 0, "scanInt", true, "int");
+        add(treeItem, 0, "scanFloat", true, "float");
+        add(treeItem, 0, "scanDouble", true, "double");
+        add(treeItem, 0, "scanStr", true, "str");
+        add(treeItem, 0, "fps", true, "int");
         add(treeItem, 0, "pressedKeys", true, "str[]");
         add(treeItem, 0, "mouseX", true, "int");
         add(treeItem, 0, "mouseY", true, "int");
@@ -314,7 +323,7 @@ public class Documentation {
         add(treeItem, 0, "mouseDeltaY", true, "int");
         add(treeItem, 0, "mouseDeltaPos", true, "point");
         add(treeItem, 0, "mouseScroll", true, "int");
-        add(treeItem, 0, "clipboard", false, "string");
+        add(treeItem, 0, "clipboard", false, "str");
         add(treeItem, 0, "defaultFont", true, "font");
         add(treeItem, 0, "server", true, "server");
 
@@ -375,6 +384,12 @@ public class Documentation {
         add(treeItem, 1, "resizable", false, "bool");
         add(treeItem, 1, "vsync", false, "bool");
         add(treeItem, 1, "decorated", false, "bool");
+        add(treeItem, 1, "cam", false, "cam2");
+
+        add(treeItem, 0, "website", true, "void");
+
+        add(treeItem, 1, "stop", true, "void");
+        add(treeItem, 1, "port", true, "int");
 
         return treeItem;
     }
@@ -402,7 +417,10 @@ public class Documentation {
         add(treeItem, 0, "thread(bool isDaemon){BLOCK}", "void");
         add(treeItem, 0, "runLater(bool trueForGDXFalseForGUI){BLOCK}", "void");
         add(treeItem, 0, "wait(int milliseconds)", "void");
-        add(treeItem, 0, "exec{str expression}", "void");
+        add(treeItem, 0, "waitUntil(bool condition)", "void");
+        add(treeItem, 0, "waitUntil(bool condition, int intervalBetweenChecksInMillis)", "void");
+        add(treeItem, 0, "eval{str expression}", "void");
+        add(treeItem, 0, "parse{str expression}", "expr");
         add(treeItem, 0, "random()", "float");
         add(treeItem, 0, "random(int range)", "int");
         add(treeItem, 0, "random(int start, int end)", "int");
@@ -425,6 +443,9 @@ public class Documentation {
         add(treeItem, 0, "sqrt(double num)", "double");
         add(treeItem, 0, "toDeg(double radians)", "double");
         add(treeItem, 0, "toRad(double degrees)", "double");
+        add(treeItem, 0, "snap(double num, double cellSize)", "double");
+        add(treeItem, 0, "digit(double num, int index)", "int");
+        add(treeItem, 0, "prime(int num)", "bool");
         add(treeItem, 0, "img(str name)", "img");
         add(treeItem, 0, "img(file f)", "img");
         add(treeItem, 0, "sound(str name)", "sound");
@@ -447,7 +468,7 @@ public class Documentation {
         add(treeItem, 0, "sprite(img x)", "sprite");
         add(treeItem, 0, "sprite(file f)", "sprite");
         add(treeItem, 0, "sprite(str name)", "sprite");
-        add(treeItem, 0, "camera2d()", "camera2d");
+        add(treeItem, 0, "cam2()", "cam2");
         add(treeItem, 0, "point(double x, double y)", "point");
         add(treeItem, 0, "color(str name)", "color");
         add(treeItem, 0, "color(str name, float a)", "color");
@@ -477,11 +498,16 @@ public class Documentation {
         add(treeItem, 0, "moveMouse(point p)", "void");
         add(treeItem, 0, "moveMouse(int x, int y)", "void");
         add(treeItem, 0, "browse(str url)", "void");
+        add(treeItem, 0, "html(str url)", "str");
         add(treeItem, 0, "google(str term)", "void");
+        add(treeItem, 0, "website(func serve(str url, str(str) params))", "void");
+        add(treeItem, 0, "website(func serve(str url, str(str) params), file root)", "void");
+        add(treeItem, 0, "website(int port, func serve(str url, str(str) params))", "void");
+        add(treeItem, 0, "website(int port, func serve(str url, str(str) params), file root)", "void");
         add(treeItem, 0, "noise(double x, double y)", "double");
         add(treeItem, 0, "noise(double x, double y, double z)", "double");
         add(treeItem, 0, "noise(double x, double y, double z, double w)", "double");
-        add(treeItem, 0, "path(point start, point goal, int width, int height, func isValid", "point[]");
+        add(treeItem, 0, "path(point start, point goal, int width, int height, func isValid(int x, int y)", "point[]");
         add(treeItem, 0, "circle(float x, float y, float radius)", "void");
         add(treeItem, 0, "circle(float x, float y, float radius, int segments)", "void");
         add(treeItem, 0, "ellipse(float x, float y, float width, float height)", "void");
