@@ -50,6 +50,9 @@ public class Documentation {
 
         add(treeItem, 0, "byte");
         add(treeItem, 0, "bool");
+
+        add(treeItem, 1, "flip", true, "bool");
+
         add(treeItem, 0, "char");
 
         add(treeItem, 1, "isUpper", true, "bool");
@@ -146,6 +149,7 @@ public class Documentation {
         add(treeItem, 1, "size", true, "int");
         add(treeItem, 1, "keys", true, "list");
         add(treeItem, 1, "values", true, "list");
+        add(treeItem, 1, "reverse", true, "map");
 
         add(treeItem, 0, "file");
 
@@ -314,6 +318,7 @@ public class Documentation {
         add(treeItem, 0, "scanFloat", true, "float");
         add(treeItem, 0, "scanDouble", true, "double");
         add(treeItem, 0, "scanStr", true, "str");
+        add(treeItem, 0, "input", true, "str");
         add(treeItem, 0, "fps", true, "int");
         add(treeItem, 0, "pressedKeys", true, "str[]");
         add(treeItem, 0, "mouseX", true, "int");
@@ -384,6 +389,7 @@ public class Documentation {
         add(treeItem, 1, "resizable", false, "bool");
         add(treeItem, 1, "vsync", false, "bool");
         add(treeItem, 1, "decorated", false, "bool");
+        add(treeItem, 1, "catch", false, "bool");
         add(treeItem, 1, "cam", false, "cam2");
 
         add(treeItem, 0, "website", true, "void");
@@ -404,7 +410,7 @@ public class Documentation {
         add(treeItem, 0, "return(any value)", "void");
         add(treeItem, 0, "print(any value)", "void");
         add(treeItem, 0, "println(any value)", "void");
-        add(treeItem, 0, "super(?)", "any");
+        add(treeItem, 0, "super(CONSTRUCTOR PARAMETERS)", "any");
         add(treeItem, 0, "while(bool condition){BLOCK}", "void");
         add(treeItem, 0, "repeat(int timesToRepeat){BLOCK}", "void");
         add(treeItem, 0, "switch(any value){BLOCK}", "void");
@@ -414,11 +420,18 @@ public class Documentation {
         add(treeItem, 0, "foreach(any var : list x){BLOCK}", "void");
         add(treeItem, 0, "when(bool condition){BLOCK}", "void");
         add(treeItem, 0, "whenever(bool condition){BLOCK}", "void");
+        add(treeItem, 0, "removeEvent(int index)", "void");
+        add(treeItem, 0, "after(double seconds){BLOCK}", "void");
+        add(treeItem, 0, "every(double seconds){BLOCK}", "void");
+        add(treeItem, 0, "removeTimer(int index)", "void");
         add(treeItem, 0, "thread(bool isDaemon){BLOCK}", "void");
         add(treeItem, 0, "runLater(bool trueForGDXFalseForGUI){BLOCK}", "void");
         add(treeItem, 0, "wait(int milliseconds)", "void");
         add(treeItem, 0, "waitUntil(bool condition)", "void");
-        add(treeItem, 0, "waitUntil(bool condition, int intervalBetweenChecksInMillis)", "void");
+        add(treeItem, 0, "waitUntil(bool condition, double secondsBetweenChecks)", "void");
+        add(treeItem, 0, "input(str title, str text, str hint)", "str");
+        add(treeItem, 0, "input(str title, str text)", "str");
+        add(treeItem, 0, "input(str title)", "str");
         add(treeItem, 0, "eval{str expression}", "void");
         add(treeItem, 0, "parse{str expression}", "expr");
         add(treeItem, 0, "random()", "float");

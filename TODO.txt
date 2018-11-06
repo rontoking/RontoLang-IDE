@@ -1,3 +1,4 @@
+- Add ability to use the scan instructions in the IDE console.
 - Limit the size of the output/error log.
 - Add special code file that sets the config before the Main class starts (like config.title, config.width, config.height...)
 - Add changing viewport to camera (stretch, screen, fit...)
